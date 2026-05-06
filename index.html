@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhatsApp</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #1c1e21;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 24px 32px;
+      border-bottom: 1px solid #e9edef;
+    }
+
+    .logo {
+      color: #25d366;
+      font-size: 30px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-circle {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #25d366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 560px;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      background: #e9edef;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 400;
+      margin-bottom: 22px;
+      color: #111b21;
+    }
+
+    .message {
+      font-size: 19px;
+      color: #3b4a54;
+      margin-bottom: 32px;
+      line-height: 1.4;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 34px;
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 320px;
+      padding: 14px 18px;
+      border-radius: 28px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #25d366;
+      color: #111b21;
+    }
+
+    .btn-primary:hover {
+      background: #1fc45c;
+    }
+
+    .btn-secondary {
+      border: 1px solid #25d366;
+      color: #008069;
+      background: #fff;
+    }
+
+    .download {
+      color: #54656f;
+      font-size: 15px;
+      margin-top: 10px;
+    }
+
+    .download a {
+      color: #008069;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    footer {
+      padding: 25px 20px;
+      text-align: center;
+      color: #667781;
+      font-size: 14px;
+      border-top: 1px solid #e9edef;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 20px;
+      }
+
+      .logo {
+        font-size: 26px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .message {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <div class="logo-circle">☎</div>
+      WhatsApp
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <div class="avatar">
+        <!-- Cambiá esta imagen por tu logo si querés -->
+        <img src="https://static.whatsapp.net/rsrc.php/yZ/r/JvsnINJ2CZv.svg" alt="WhatsApp">
+      </div>
+
+      <h1>NOMBRE DEL NEGOCIO</h1>
+
+      <p class="message">
+        Hola! ya tengo una cuenta, mi usuario es:
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-primary" href="https://wa.me/549XXXXXXXXXX?text=Hola!%20ya%20tengo%20una%20cuenta,%20mi%20usuario%20es:">
+          Abrir aplicación
+        </a>
+
+        <a class="btn btn-secondary" href="https://web.whatsapp.com/send?phone=549XXXXXXXXXX&text=Hola!%20ya%20tengo%20una%20cuenta,%20mi%20usuario%20es:">
+          Continuar en WhatsApp Web
+        </a>
+      </div>
+
+      <p class="download">
+        ¿No tienes la aplicación?<br>
+        <a href="https://www.whatsapp.com/download" target="_blank">Descárgala ahora</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    WhatsApp
+  </footer>
+</body>
+</html>
