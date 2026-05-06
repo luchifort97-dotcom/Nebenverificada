@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WhatsApp</title>
 
-  <!-- META PIXEL -->
+  <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -20,8 +20,7 @@
     t.src=v;
     s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}
-    (window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+    (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
     fbq('init', '1529393148518145');
     fbq('track', 'PageView');
@@ -31,7 +30,7 @@
     <img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1529393148518145&ev=PageView&noscript=1"/>
   </noscript>
-  <!-- END META PIXEL -->
+  <!-- End Meta Pixel Code -->
 
   <style>
     * {
@@ -42,111 +41,153 @@
     }
 
     body {
-      background: #fff;
+      background: #ffffff;
       color: #1c1e21;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
     }
 
     header {
-      padding: 24px 32px;
-      border-bottom: 1px solid #e9edef;
-    }
-
-    .logo {
-      color: #25d366;
-      font-size: 30px;
-      font-weight: 600;
+      width: 100%;
+      height: 80px;
+      padding: 0 38px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      justify-content: space-between;
     }
 
-    .logo-circle {
-      width: 34px;
-      height: 34px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #25d366;
+      font-size: 19px;
+      font-weight: 700;
+    }
+
+    .brand-icon {
+      width: 29px;
+      height: 29px;
+      border: 3px solid #25d366;
       border-radius: 50%;
-      background: #25d366;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
+      font-size: 15px;
+      color: #25d366;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 38px;
+      font-size: 16px;
+      color: #111;
+    }
+
+    nav a {
+      color: #111;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .download-btn {
+      background: #25d366;
+      color: #111;
+      border: 1.5px solid #111;
+      border-radius: 32px;
+      padding: 16px 29px;
+      font-size: 16px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
     main {
-      flex: 1;
+      min-height: calc(100vh - 80px);
       display: flex;
-      align-items: center;
       justify-content: center;
-      padding: 40px 20px;
+      padding-top: 54px;
     }
 
-    .card {
+    .content {
       width: 100%;
-      max-width: 560px;
+      max-width: 620px;
       text-align: center;
     }
 
     .avatar {
-      width: 110px;
-      height: 110px;
-      margin: 0 auto 24px;
-      border-radius: 24px;
+      width: 94px;
+      height: 94px;
+      border-radius: 50%;
       overflow: hidden;
-      background: white;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      margin: 0 auto 34px;
+      background: #eee;
     }
 
     .avatar img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
-      padding: 10px;
+      object-fit: cover;
     }
 
     h1 {
-      font-size: 28px;
+      font-size: 25px;
       font-weight: 400;
-      margin-bottom: 22px;
-      color: #111b21;
+      color: #111;
+      margin-bottom: 34px;
     }
 
-    .message {
-      font-size: 19px;
-      color: #3b4a54;
-      margin-bottom: 32px;
-      line-height: 1.4;
+    .message-box {
+      width: 540px;
+      max-width: 100%;
+      height: 62px;
+      margin: 0 auto 32px;
+      background: #f7f5f3;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4a4a4a;
+      font-size: 18px;
+      position: relative;
+    }
+
+    .message-box::after {
+      content: "⌃\A⌄";
+      white-space: pre;
+      position: absolute;
+      right: -12px;
+      top: 4px;
+      color: #777;
+      font-size: 15px;
+      line-height: 28px;
     }
 
     .buttons {
       display: flex;
       flex-direction: column;
-      gap: 14px;
       align-items: center;
+      gap: 13px;
       margin-bottom: 34px;
     }
 
     .btn {
-      width: 100%;
-      max-width: 320px;
-      padding: 14px 18px;
+      width: 258px;
+      height: 50px;
       border-radius: 28px;
-      font-size: 16px;
-      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
-      cursor: pointer;
+      font-size: 16px;
+      color: #111;
       transition: 0.2s ease;
     }
 
     .btn-primary {
       background: #25d366;
-      color: #111b21;
+      border: 1.5px solid #111;
     }
 
     .btn-primary:hover {
@@ -154,46 +195,84 @@
     }
 
     .btn-secondary {
-      border: 1px solid #25d366;
-      color: #008069;
       background: #fff;
+      border: 1.5px solid #111;
     }
 
-    .download {
-      color: #54656f;
+    .app-download {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 18px;
+      color: #111;
+    }
+
+    .small-wa {
+      width: 25px;
+      height: 25px;
+      background: #25d366;
+      color: #fff;
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 15px;
-      margin-top: 10px;
     }
 
-    .download a {
-      color: #008069;
-      font-weight: 600;
+    .app-download a {
+      color: #111;
       text-decoration: none;
+      border-bottom: 2px solid #25d366;
+      font-weight: 500;
     }
 
-    footer {
-      padding: 25px 20px;
-      text-align: center;
-      color: #667781;
-      font-size: 14px;
-      border-top: 1px solid #e9edef;
+    @media (max-width: 900px) {
+      nav {
+        display: none;
+      }
+
+      header {
+        padding: 0 22px;
+      }
+
+      .download-btn {
+        padding: 12px 20px;
+      }
     }
 
     @media (max-width: 600px) {
-      header {
-        padding: 20px;
+      main {
+        padding: 38px 20px 0;
       }
 
-      .logo {
-        font-size: 26px;
+      .avatar {
+        width: 88px;
+        height: 88px;
+        margin-bottom: 28px;
       }
 
       h1 {
         font-size: 24px;
+        margin-bottom: 28px;
       }
 
-      .message {
+      .message-box {
+        width: 100%;
         font-size: 17px;
+      }
+
+      .message-box::after {
+        right: 8px;
+      }
+
+      .btn {
+        width: 258px;
+      }
+
+      .app-download {
+        font-size: 16px;
+        flex-wrap: wrap;
       }
     }
   </style>
@@ -202,28 +281,40 @@
 <body>
 
   <header>
-    <div class="logo">
-      <div class="logo-circle">☎</div>
+    <div class="brand">
+      <div class="brand-icon">☎</div>
       WhatsApp
     </div>
+
+    <nav>
+      <a href="#">Características⌄</a>
+      <a href="#">Privacidad</a>
+      <a href="#">Centro de ayuda</a>
+      <a href="#">Blog</a>
+      <a href="#">Para empresas</a>
+      <a href="#">Aplicaciones</a>
+    </nav>
+
+    <a class="download-btn" href="https://www.whatsapp.com/download" target="_blank">
+      Descargar ↓
+    </a>
   </header>
 
   <main>
-    <section class="card">
+    <section class="content">
 
       <div class="avatar">
-        <!-- CAMBIÁ ESTA RUTA POR TU LOGO -->
+        <!-- Subí tu logo como logo.png al mismo repo -->
         <img src="./logo.png" alt="Logo">
       </div>
 
       <h1>NEBEN</h1>
 
-      <p class="message">
-        Hola! Quiero un usuar1o:
-      </p>
+      <div class="message-box">
+        Hola! quiero un usuar1o:
+      </div>
 
       <div class="buttons">
-
         <a
           class="btn btn-primary"
           href="https://wa.me/5491168291698?text=Hola!%20quiero%20un%20usuar1o:"
@@ -239,22 +330,16 @@
         >
           Continuar en WhatsApp Web
         </a>
-
       </div>
 
-      <p class="download">
-        ¿No tienes la aplicación?<br>
-        <a href="https://www.whatsapp.com/download" target="_blank">
-          Descárgala ahora
-        </a>
-      </p>
+      <div class="app-download">
+        <div class="small-wa">☎</div>
+        <span>¿No tienes la aplicación?</span>
+        <a href="https://www.whatsapp.com/download" target="_blank">Descárgala ahora</a>
+      </div>
 
     </section>
   </main>
-
-  <footer>
-    WhatsApp
-  </footer>
 
 </body>
 </html>
